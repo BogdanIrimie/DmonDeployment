@@ -4,6 +4,7 @@ default['dmon']['frontend']['remote_location'] = 'https://bitbucket.org/specs-te
 default['dmon']['frontend']['archive_path'] = '/home/ubuntu/specs_monitoring_nmap_frontend.tar.gz'
 default['dmon']['frontend']['deployment_directory'] = '/home/ubuntu'
 default['dmon']['frontend']['etc_directory'] = '/home/ubuntu/specs_monitoring_nmap_frontend/etc'
+default['dmon']['frontend']['config_file'] = '/home/ubuntu/specs_monitoring_nmap_frontend/etc/conf.properties'
 
 # Scanner
 default['dmon']['scanner']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scanner.tar.gz'

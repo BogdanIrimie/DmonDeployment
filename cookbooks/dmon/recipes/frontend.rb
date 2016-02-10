@@ -25,8 +25,14 @@ file node['dmon']['frontend']['archive_path'] do
     action :delete
 end
 
-# Create specs_monitoring_nmap_frontend/etc directory if it does not exit
+# Create specs_monitoring_nmap_frontend/etc directory if it does not exit.
 directory node['dmon']['frontend']['etc_directory'] do
     action :create
     not_if {::File.exists?("#{node['dmon']['frontend']['etc_directory']}")}
+end
+
+# Create config file.
+file node['dmon']['frontend']['config_file'] do
+    action :create
+    content 'Some Configurations ??? Maybe not!'
 end
