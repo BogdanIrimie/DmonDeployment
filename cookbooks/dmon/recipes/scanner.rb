@@ -23,3 +23,9 @@ end
 file node['dmon']['scanner']['archive_path'] do
     action :delete
 end
+
+# Create specs_monitoring_nmap_scanner/etc directory if it does not exit
+directory node['dmon']['scanner']['etc_directory'] do
+    action :create
+    not_if {::File.exists?("#{node['dmon']['scanner']['etc_directory']}")}
+end
