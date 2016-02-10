@@ -29,3 +29,9 @@ directory node['dmon']['presenter']['etc_directory'] do
     action :create
     not_if {::File.exists?("#{node['dmon']['presenter']['etc_directory']}")}
 end
+
+# Create config file.
+template node['dmon']['presenter']['conf_file'] do
+    action :create
+    source 'presenter.conf.properties.erb'
+end

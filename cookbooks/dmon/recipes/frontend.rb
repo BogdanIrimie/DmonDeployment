@@ -32,7 +32,7 @@ directory node['dmon']['frontend']['etc_directory'] do
 end
 
 # Create config file.
-file node['dmon']['frontend']['config_file'] do
+template node['dmon']['frontend']['conf_file'] do
     action :create
-    content 'Some Configurations ??? Maybe not!'
+    source 'frontend.conf.properties.erb'
 end

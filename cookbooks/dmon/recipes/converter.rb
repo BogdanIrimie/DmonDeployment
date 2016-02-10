@@ -25,7 +25,13 @@ file node['dmon']['converter']['archive_path'] do
 end
 
 # Create specs_monitoring_nmap_converter/etc directory if it does not exit
-directory node['dmon']['frontend']['etc_directory'] do
+directory node['dmon']['converter']['etc_directory'] do
     action :create
-    not_if {::File.exists?("#{node['dmon']['frontend']['etc_directory']}")}
+    not_if {::File.exists?("#{node['dmon']['converter']['etc_directory']}")}
+end
+
+# Create config file.
+template node['dmon']['converter']['conf_file'] do
+    action :create
+    source 'converter.conf.properties.erb'
 end

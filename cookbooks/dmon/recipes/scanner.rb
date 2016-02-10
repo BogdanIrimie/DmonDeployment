@@ -29,3 +29,9 @@ directory node['dmon']['scanner']['etc_directory'] do
     action :create
     not_if {::File.exists?("#{node['dmon']['scanner']['etc_directory']}")}
 end
+
+# Create config file.
+template node['dmon']['scanner']['conf_file'] do
+    action :create
+    source 'scanner.conf.properties.erb'
+end
