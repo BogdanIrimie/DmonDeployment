@@ -8,3 +8,8 @@ default['dmon']['frontend']['deployment_directory'] = '/home/ubuntu'
 default['dmon']['scanner']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scanner.tar.gz'
 default['dmon']['scanner']['archive_path'] = '/home/ubuntu/specs_monitoring_nmap_scanner.tar.gz'
 default['dmon']['scanner']['deployment_directory'] = '/home/ubuntu'
+
+# Converter
+default['dmon']['converter']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_converter.tar.gz'
+default['dmon']['converter']['archive_path'] = '/home/ubuntu/specs_monitoring_nmap_converter.tar.gz'
+default['dmon']['converter']['deployment_directory'] = '/home/ubuntu'

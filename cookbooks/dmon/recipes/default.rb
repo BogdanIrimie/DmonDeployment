@@ -6,3 +6,4 @@
 
 include_recipe 'dmon::frontend'
 include_recipe 'dmon::scanner'
+include_recipe 'dmon::converter'
