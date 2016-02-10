@@ -1,6 +1,12 @@
+#
+# Cookbook Name:: dmon
+# Recipe:: frontend
+#
+# Copyright (c) 2016 Bogdan-Constantin Irimie, All Rights Reserved.
+
 # Download remote archive.
 remote_file node['dmon']['frontend']['archive_path'] do
-    source 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_frontend.tar.gz'
+    source "#{node['dmon']['frontend']['remote_location']}"
     owner 'root'
     group 'root'
     mode '0755'
@@ -11,7 +17,7 @@ end
 # Extract the archive.
 execute 'extract_frontend' do
     command "tar -xvzf #{node['dmon']['frontend']['archive_path']}"
-    cwd "#{node['dmon']['deployment_directory']}/specs_monitoring_nmap_frontend"
+    cwd "#{node['dmon']['frontend']['deployment_directory']}"
 end
 
 # Remove the archive.
