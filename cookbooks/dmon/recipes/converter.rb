@@ -4,6 +4,11 @@
 #
 # Copyright (c) 2016 Bogdan-Constantin Irimie, All Rights Reserved.
 
+# Install the required packages
+package "mos-oracle-java-jdk-8"
+package "mos-mongodb-org"
+# package "mos-rabbitmq"
+
 # Download remote archive.
 remote_file node['dmon']['converter']['archive_path'] do
     source "#{node['dmon']['converter']['remote_location']}"
