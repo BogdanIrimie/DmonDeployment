@@ -7,9 +7,8 @@
 # Install the required packages
 package "mos-oracle-java-jdk-8"
 package "mos-mongodb-org"
-# package "mos-rabbitmq"
-# package "mos-nmap"
-
+package "mos-rabbitmq-server"
+package "nmap"
 # Download remote archive.
 remote_file node['dmon']['scanner']['archive_path'] do
     source "#{node['dmon']['scanner']['remote_location']}"
