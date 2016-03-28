@@ -1,10 +1,17 @@
 
 # FrontEnd
-default['dmon']['frontend']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_frontend.tar.gz' 
+default['dmon']['frontend']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_frontend.tar.gz'
 default['dmon']['frontend']['archive_path'] = '/root/specs_monitoring_nmap_frontend.tar.gz'
 default['dmon']['frontend']['deployment_directory'] = '/root'
 default['dmon']['frontend']['etc_directory'] = '/root/specs_monitoring_nmap_frontend/etc'
 default['dmon']['frontend']['conf_file'] = '/root/specs_monitoring_nmap_frontend/etc/conf.properties'
+
+#Scheduler
+default['dmon']['scheduler']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scheduler.tar.gz'
+default['dmon']['scheduler']['archive_path'] = '/root/specs_monitoring_nmap_sceduler.tar.gz'
+default['dmon']['scheduler']['deployment_directory'] = '/root'
+default['dmon']['scheduler']['etc_directory'] = '/root/specs_monitoring_nmap_scheduler/etc'
+default['dmon']['scheduler']['conf_file'] = '/root/specs_monitoring_nmap_scheduler/etc/conf.properties'
 
 # Scanner
 default['dmon']['scanner']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scanner.tar.gz'
