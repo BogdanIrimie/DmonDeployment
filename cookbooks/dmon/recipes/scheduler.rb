@@ -19,7 +19,7 @@ remote_file node['dmon']['scheduler']['archive_path'] do
 end
 
 # Extract the archive.
-execute 'extract_scanner' do
+execute 'extract_scheduler' do
     command "tar -xvzf #{node['dmon']['scheduler']['archive_path']}"
     cwd "#{node['dmon']['scheduler']['deployment_directory']}"
 end
@@ -29,7 +29,7 @@ file node['dmon']['scheduler']['archive_path'] do
     action :delete
 end
 
-# Create specs_monitoring_nmap_scanner/etc directory if it does not exit
+# Create specs_monitoring_nmap_scheduler/etc directory if it does not exit
 directory node['dmon']['scheduler']['etc_directory'] do
     action :create
     not_if {::File.exists?("#{node['dmon']['scheduler']['etc_directory']}")}
