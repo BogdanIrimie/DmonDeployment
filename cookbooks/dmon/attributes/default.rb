@@ -1,7 +1,7 @@
 
 # RabbitMQ
 default['dmon']['rabbitmq']['remote_location'] = 'http://www.rabbitmq.com/community-plugins/v3.6.x/rabbitmq_delayed_message_exchange-0.0.1.ez'
-default['dmon']['rabbitmq']['path'] = '/usr/lib/rabbitmq/lib/*/plugins/rabbitmq_delayed_message_exchange-0.0.1.ez'
+default['dmon']['rabbitmq']['plugin_path'] = '/usr/lib/rabbitmq/lib/rabbitmq_server-3.6.0/plugins/rabbitmq_delayed_message_exchange-0.0.1.ez'
 
 # FrontEnd
 default['dmon']['frontend']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_frontend.tar.gz'
