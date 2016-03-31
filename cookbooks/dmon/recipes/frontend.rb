@@ -7,31 +7,6 @@
 # Install the required packages.
 package "mos-oracle-java-jdk-8"
 package "mos-mongodb-org"
-package "mos-rabbitmq-server"
-
-#Start RabbitMQ server.
-service "mos-rabbitmq-server_start" do
-    not_if do ::File.exists?("/var/run/rabbitmq/pid") end
-    provider Chef::Provider::Service::Systemd
-    service_name "rabbitmq-server"
-    action :start
-end
-
-#Create RabbitMQ user if it does not exist.
-bash 'create_rabbitmq_user' do
-    user "root"
-    code <<-EOH
-        if [[ $(rabbitmqctl list_users) == *"bogdan"* ]]
-        then
-          echo "User bogdan exists, no further action is required."
-        else
-          rabbitmqctl add_user bogdan constantin
-          rabbitmqctl set_user_tags bogdan administrator
-          rabbitmqctl set_permissions -p / bogdan ".*" ".*" ".*"
-          echo "New user bogdan was created."
-        fi
-    EOH
-end
 
 # Download remote archive.
 remote_file node['dmon']['frontend']['archive_path'] do
