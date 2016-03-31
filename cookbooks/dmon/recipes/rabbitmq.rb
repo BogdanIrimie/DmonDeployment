@@ -32,3 +32,11 @@ bash 'create_rabbitmq_user' do
 end
 
 # Install plugin for delayed messages.
+remote_file node['dmon']['rabbit']['archive_path'] do
+    source "#{node['dmon']['rabbitmq']['remote_location']}"
+    owner 'root'
+    group 'root'
+    mode '0755'
+    action :create
+    not_if {::File.exists?("#{node['dmon']['rabbitmq']['remote_location']}") }
+end
