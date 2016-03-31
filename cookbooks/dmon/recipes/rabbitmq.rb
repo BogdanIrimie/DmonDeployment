@@ -30,3 +30,5 @@ bash 'create_rabbitmq_user' do
         fi
     EOH
 end
+
+# Install plugin for delayed messages.
