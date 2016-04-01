@@ -6,7 +6,6 @@
 
 # Install the required packages
 package "mos-oracle-java-jdk-8"
-package "mos-mongodb-org"
 
 # Download remote archive if there is no deployment.
 remote_file node['dmon']['scheduler']['archive_path'] do

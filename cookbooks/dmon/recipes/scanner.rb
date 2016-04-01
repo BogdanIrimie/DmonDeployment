@@ -6,7 +6,6 @@
 
 # Install the required packages.
 package "mos-oracle-java-jdk-8"
-package "mos-mongodb-org"
 package "nmap"
 
 # Download remote archive if there is no deployment.
