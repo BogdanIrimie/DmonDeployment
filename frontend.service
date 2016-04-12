@@ -1,0 +1,9 @@
+[Unit]
+Description=FrontEnd service
+[Service]
+ExecStart=/root/specs_monitoring_nmap_frontend/bin/start.sh
+ExecStop=/root/specs_monitoring_nmap_frontend/bin/stop.sh
+User=root
+Type=simple
+[Install]
+WantedBy=multi-user.target

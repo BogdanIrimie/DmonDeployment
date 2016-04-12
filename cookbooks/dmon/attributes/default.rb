@@ -14,6 +14,7 @@ default['dmon']['frontend']['conf_file'] = '/root/specs_monitoring_nmap_frontend
 # Start FrontEnd
 default['start_frontend']['config_file'] = '/etc/sysconfig/frontend_config'
 default['start_frontend']['home'] = '/root/specs_monitoring_nmap_frontend'
+default['start_frontend']['systemd_service'] = '/etc/systemd/system/frontend.service'
 
 #Scheduler
 default['dmon']['scheduler']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scheduler.tar.gz'

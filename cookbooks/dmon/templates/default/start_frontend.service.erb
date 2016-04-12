@@ -1,0 +1,9 @@
+[Unit]
+Description=<%=@componentName%> service
+[Service]
+ExecStart=<%=@home%>/bin/start.sh
+ExecStop=<%=@home%>/bin/stop.sh
+User=root
+Type=simple
+[Install]
+WantedBy=multi-user.target
