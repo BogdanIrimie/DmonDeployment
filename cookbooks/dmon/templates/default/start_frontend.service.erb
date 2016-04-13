@@ -4,6 +4,6 @@ Description=<%=@componentName%> service
 ExecStart=<%=@home%>/bin/start.sh
 ExecStop=<%=@home%>/bin/stop.sh
 User=root
-Type=simple
+Type=forking
 [Install]
 WantedBy=multi-user.target
