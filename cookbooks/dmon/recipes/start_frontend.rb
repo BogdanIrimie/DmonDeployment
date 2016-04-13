@@ -7,7 +7,6 @@
 # Create config file.
 template node['start_frontend']['config_file'] do
   source 'start_frontend_config.erb'
-  not_if {::File.exists?("#{node['start_frontend']['config_file']}")}
   variables({
     :environmentVariable => 'FRONTEND_HOME',
     :home => node['start_frontend']['home']
@@ -17,7 +16,6 @@ end
 # Create systemd service file.
 template node['start_frontend']['systemd_service'] do
   source 'start_frontend.service.erb'
-  not_if {::File.exists?("#{node['start_frontend']['systemd_service']}")}
   variables({
     :componentName => 'FrontEnd',
     :home => node['start_frontend']['home']
