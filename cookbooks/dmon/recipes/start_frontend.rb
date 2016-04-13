@@ -6,7 +6,7 @@
 
 # Create config file.
 template node['start_frontend']['config_file'] do
-  source 'start_frontend_config.erb'
+  source 'component_home_config.erb'
   variables({
     :environmentVariable => 'FRONTEND_HOME',
     :home => node['start_frontend']['home']
@@ -15,7 +15,7 @@ end
 
 # Create systemd service file.
 template node['start_frontend']['systemd_service'] do
-  source 'start_frontend.service.erb'
+  source 'start_component.service.erb'
   variables({
     :componentName => 'FrontEnd',
     :home => node['start_frontend']['home']
