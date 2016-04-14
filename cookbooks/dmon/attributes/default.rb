@@ -4,7 +4,7 @@ default['dmon']['rabbitmq']['remote_location'] = 'http://www.rabbitmq.com/commun
 default['dmon']['rabbitmq']['plugin_path'] = '/usr/lib/rabbitmq/lib/rabbitmq_server-3.6.0/plugins/rabbitmq_delayed_message_exchange-0.0.1.ez'
 
 # FrontEnd
-default['dmon']['frontend']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_frontend.tar.gz'
+default['dmon']['frontend']['remote_location'] = 'https://github.com/IrimieBogdan/DistributedMonitoring/releases/download/V0.1.4/specs_monitoring_nmap_frontend.tar.gz'
 default['dmon']['frontend']['archive_path'] = '/root/specs_monitoring_nmap_frontend.tar.gz'
 default['dmon']['frontend']['deployment_directory'] = '/root'
 default['dmon']['frontend']['component_home_directory'] = '/root/specs_monitoring_nmap_frontend'
@@ -17,7 +17,7 @@ default['start_frontend']['home'] = '/root/specs_monitoring_nmap_frontend'
 default['start_frontend']['systemd_service'] = '/etc/systemd/system/frontend.service'
 
 # Scheduler
-default['dmon']['scheduler']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scheduler.tar.gz'
+default['dmon']['scheduler']['remote_location'] = 'https://github.com/IrimieBogdan/DistributedMonitoring/releases/download/V0.1.4/specs_monitoring_nmap_scheduler.tar.gz'
 default['dmon']['scheduler']['archive_path'] = '/root/specs_monitoring_nmap_sceduler.tar.gz'
 default['dmon']['scheduler']['deployment_directory'] = '/root'
 default['dmon']['scheduler']['component_home_directory'] = '/root/specs_monitoring_nmap_scheduler'
@@ -30,7 +30,7 @@ default['start_scheduler']['home'] = '/root/specs_monitoring_nmap_scheduler'
 default['start_scheduler']['systemd_service'] = '/etc/systemd/system/scheduler.service'
 
 # Scanner
-default['dmon']['scanner']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_scanner.tar.gz'
+default['dmon']['scanner']['remote_location'] = 'https://github.com/IrimieBogdan/DistributedMonitoring/releases/download/V0.1.4/specs_monitoring_nmap_scanner.tar.gz'
 default['dmon']['scanner']['archive_path'] = '/root/specs_monitoring_nmap_scanner.tar.gz'
 default['dmon']['scanner']['deployment_directory'] = '/root'
 default['dmon']['scanner']['component_home_directory'] = '/root/specs_monitoring_nmap_scanner'
@@ -43,7 +43,7 @@ default['start_scanner']['home'] = '/root/specs_monitoring_nmap_scanner'
 default['start_scanner']['systemd_service'] = '/etc/systemd/system/scanner.service'
 
 # Converter
-default['dmon']['converter']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_converter.tar.gz'
+default['dmon']['converter']['remote_location'] = 'https://github.com/IrimieBogdan/DistributedMonitoring/releases/download/V0.1.4/specs_monitoring_nmap_converter.tar.gz'
 default['dmon']['converter']['archive_path'] = '/root/specs_monitoring_nmap_converter.tar.gz'
 default['dmon']['converter']['deployment_directory'] = '/root'
 default['dmon']['converter']['component_home_directory'] = '/root/specs_monitoring_nmap_converter'
@@ -56,7 +56,7 @@ default['start_converter']['home'] = '/root/specs_monitoring_nmap_converter'
 default['start_converter']['systemd_service'] = '/etc/systemd/system/converter.service'
 
 # Presenter
-default['dmon']['presenter']['remote_location'] = 'https://bitbucket.org/specs-team/specs-monitoring-nmap/downloads/specs_monitoring_nmap_presenter.tar.gz'
+default['dmon']['presenter']['remote_location'] = 'https://github.com/IrimieBogdan/DistributedMonitoring/releases/download/V0.1.4/specs_monitoring_nmap_presenter.tar.gz'
 default['dmon']['presenter']['archive_path'] = '/root/specs_monitoring_nmap_presenter.tar.gz'
 default['dmon']['presenter']['deployment_directory'] = '/root'
 default['dmon']['presenter']['component_home_directory'] = '/root/specs_monitoring_nmap_presenter'
