@@ -3,8 +3,12 @@
 # Cookbook Name:: rabbitmq
 # Recipe:: virtualhost_management
 #
+<<<<<<< HEAD:cookbooks/rabbitmq/recipes/virtualhost_management.rb
 # Copyright 2013, Grégoire Seux
 # Copyright 2013, Chef Software, Inc.
+=======
+# Copyright 2013-2016, Chef Software, Inc.
+>>>>>>> chef-vendor-apt:cookbooks/apt/libraries/network.rb
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +23,7 @@
 # limitations under the License.
 #
 
+<<<<<<< HEAD:cookbooks/rabbitmq/recipes/virtualhost_management.rb
 include_recipe 'rabbitmq::default'
 
 node['rabbitmq']['virtualhosts'].each do |virtualhost|
@@ -30,5 +35,17 @@ end
 node['rabbitmq']['disabled_virtualhosts'].each do |virtualhost|
   rabbitmq_vhost virtualhost do
     action :delete
+=======
+module ::Apt
+  def interface_ipaddress(host, interface)
+    if interface # rubocop: disable Style/GuardClause
+      addresses = host['network']['interfaces'][interface]['addresses']
+      addresses.select do |ip, data|
+        return ip if data['family'].eql?('inet')
+      end
+    else
+      return host.ipaddress
+    end
+>>>>>>> chef-vendor-apt:cookbooks/apt/libraries/network.rb
   end
 end
