@@ -5,7 +5,7 @@
 # Copyright (c) 2016 Bogdan-Constantin Irimie, All Rights Reserved.
 
 # Install the required packages
-package "mos-oracle-java-jdk-8"
+package "openjdk-8-jdk"
 
 # Download remote archive if there is no deployment.
 remote_file node['dmon']['converter']['archive_path'] do

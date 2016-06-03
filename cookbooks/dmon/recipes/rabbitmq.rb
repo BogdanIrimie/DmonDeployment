@@ -5,7 +5,7 @@
 # Copyright (c) 2016 Bogdan-Constantin Irimie, All Rights Reserved.
 
 # Install RabbitMQ package.
-package "mos-rabbitmq-server"
+package "rabbitmq-server"
 
 # Start RabbitMQ server.
 service "mos-rabbitmq-server_start" do
