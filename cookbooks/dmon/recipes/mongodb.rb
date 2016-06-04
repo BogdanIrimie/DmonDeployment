@@ -5,7 +5,7 @@
 # Copyright (c) 2016 Bogdan-Constantin Irimie, All Rights Reserved.
 
 # Install the required packages.
-package "mos-mongodb-org"
+package "mongodb-org"
 
 # Start MongoDB.
 service "mos-mongodb-start" do
