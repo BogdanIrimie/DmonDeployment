@@ -36,9 +36,8 @@ directory node['dmon']['scheduler']['etc_directory'] do
   not_if {::File.exists?("#{node['dmon']['scheduler']['etc_directory']}")}
 end
 
-# Create config file if it does not exist.
+# Create/update config file.
 template node['dmon']['scheduler']['conf_file'] do
   action :create
   source 'scheduler.conf.properties.erb'
-  not_if {::File.exists?("#{node['dmon']['scheduler']['conf_file']}")}
 end

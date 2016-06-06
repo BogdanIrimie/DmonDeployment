@@ -36,9 +36,8 @@ directory node['dmon']['presenter']['etc_directory'] do
   not_if {::File.exists?("#{node['dmon']['presenter']['etc_directory']}")}
 end
 
-# Create config file if it does not exist.
+# Create/update config file.
 template node['dmon']['presenter']['conf_file'] do
   action :create
   source 'presenter.conf.properties.erb'
-  not_if {::File.exists?("#{node['dmon']['presenter']['conf_file']}")}
 end
