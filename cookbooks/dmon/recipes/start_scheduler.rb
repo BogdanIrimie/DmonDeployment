@@ -26,7 +26,7 @@ end
 bash 'register_scheduler' do
   user "root"
   code <<-EOH
-    if [ systemctl is-enabled #{node['start_scheduler']['systemd_service'] != "*enabled*"} ]
+    if [ systemctl is-enabled #{node['start_scheduler']['systemd_service']} != "*enabled*" ]
     then
       systemctl enable #{node['start_scheduler']['systemd_service']}
     fi

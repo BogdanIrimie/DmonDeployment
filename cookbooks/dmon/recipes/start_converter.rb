@@ -26,7 +26,7 @@ end
 bash 'register_converter' do
   user "root"
   code <<-EOH
-    if [ systemctl is-enabled #{node['start_converter']['systemd_service'] != "*enabled*"} ]
+    if [ systemctl is-enabled #{node['start_converter']['systemd_service']} != "*enabled*" ]
     then
       systemctl enable #{node['start_converter']['systemd_service']}
     fi

@@ -26,7 +26,7 @@ end
 bash 'register_presenter' do
   user "root"
   code <<-EOH
-    if [ systemctl is-enabled #{node['start_presenter']['systemd_service'] != "*enabled*"} ]
+    if [ systemctl is-enabled #{node['start_presenter']['systemd_service']} != "*enabled*" ]
     then
       systemctl enable #{node['start_presenter']['systemd_service']}
     fi
