@@ -34,7 +34,7 @@ bash 'register_mongodb' do
 end
 
 # Start MongoDB.
-service "mos-mongodb-start" do
+service "mongodb-start" do
   not_if do ::File.exists?("/var/run/mongodb/mongod.pid") end
   provider Chef::Provider::Service::Systemd
   service_name "mongod"
