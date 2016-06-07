@@ -3,6 +3,7 @@ Description=<%=@componentName%> service
 [Service]
 ExecStart=<%=@home%>/bin/start.sh
 ExecStop=<%=@home%>/bin/stop.sh
+WorkingDirectory=<%=@home%>/bin
 User=root
 Type=forking
 [Install]
